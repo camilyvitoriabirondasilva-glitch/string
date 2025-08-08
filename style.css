@@ -1,1 +1,115 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
+:root {
+    --cor-destaque: #ED145B;
+    --cor-gradiente-preto: linear-gradient(113deg, #000 0%, #1E2021 44.96%, #1E2022 100%);
+    --container-glow: 0 0 40px 10px #ED145B66, 0 0 120px 40px #ED145B22;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Montserrat, Arial, sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    background: var(--cor-gradiente-preto);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 32px;
+    flex-direction: column;
+}
+
+.container {
+    background: #181820;
+    box-shadow: var(--container-glow);
+    border-radius: 2rem;
+    padding: 3.5rem 2.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2.5rem;
+    width: 100%;
+    max-width: 750px;
+    overflow: hidden;
+    border: 2px solid #ED145B33;
+    position: relative;
+    transition: box-shadow 0.3s;
+}
+
+h1 {
+    color: var(--cor-destaque);
+    font-size: 2.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-align: center;
+    margin-bottom: 0.5rem;
+}
+
+#entrada-de-texto {
+    width: 100%;
+    height: 12rem;
+    padding: 1.4rem 2.5rem;
+    border-radius: 0.8rem;
+    background: #FFF;
+    font-size: 2rem;
+    border: none;
+    box-shadow: 0 2px 12px #ED145B14;
+}
+
+#entrada-de-texto::placeholder {
+    color: #828282;
+    font-size: 2rem;
+    font-weight: 400;
+    line-height: normal;
+}
+
+#botao-palavrachave {
+    padding: 1.25rem 3rem;
+    border-radius: 0.7rem;
+    border: none;
+    background: var(--cor-destaque);
+    color: #fff;
+    font-size: 2rem;
+    font-weight: 500;
+    box-shadow: 0 4px 16px #ED145B33;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+#botao-palavrachave:hover {
+    background: #c40448;
+}
+
+#resultado-palavrachave {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.7rem;
+    border-radius: 0.625rem;
+    color: var(--cor-destaque);
+    font-size: 2.3rem;
+    justify-content: center;
+    margin-bottom: 2rem;
+    max-width: 100%;
+    max-height: 50vh;
+    overflow: auto;
+}
+
+.palavra-chave-badge {
+    display: inline-block;
+    background: var(--cor-destaque);
+    color: #fff;
+    border-radius: 1rem;
+    padding: 0.6rem 1.4rem;
+    margin: 0.4rem 0.6rem;
+    font-size: 2rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    box-shadow: 0 2px 8px rgba(237,20,91,0.14);
+    transition: background 0.2s;
+}
+.palavra-chave-badge:hover {
+    background: #c40448;
+}
