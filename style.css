@@ -1,9 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
 :root {
-    --cor-destaque: #ED145B;
-    --cor-gradiente-preto: linear-gradient(113deg, #000 0%, #1E2021 44.96%, #1E2022 100%);
-    --container-glow: 0 0 40px 10px #ED145B66, 0 0 120px 40px #ED145B22;
+    --cor-fundo-azul: linear-gradient(120deg, #3a86ff 0%, #1e3c72 100%);
+    --cor-container: #ED145B;
+    --cor-texto-container: #fff;
+    --cor-badge: #3a86ff;
+    --cor-badge-hover: #1e3c72;
 }
 
 * {
@@ -14,7 +16,7 @@
 
 body {
     min-height: 100vh;
-    background: var(--cor-gradiente-preto);
+    background: var(--cor-fundo-azul);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -23,8 +25,8 @@ body {
 }
 
 .container {
-    background: #181820;
-    box-shadow: var(--container-glow);
+    background: var(--cor-container);
+    color: var(--cor-texto-container);
     border-radius: 2rem;
     padding: 3.5rem 2.5rem;
     display: flex;
@@ -33,14 +35,15 @@ body {
     gap: 2.5rem;
     width: 100%;
     max-width: 750px;
+    box-shadow: 0 0 60px 8px #3a86ff44;
     overflow: hidden;
-    border: 2px solid #ED145B33;
+    border: 2px solid #fff3;
     position: relative;
     transition: box-shadow 0.3s;
 }
 
 h1 {
-    color: var(--cor-destaque);
+    color: #fff;
     font-size: 2.8rem;
     font-weight: 700;
     text-transform: uppercase;
@@ -56,8 +59,9 @@ h1 {
     border-radius: 0.8rem;
     background: #FFF;
     font-size: 2rem;
+    color: #222;
     border: none;
-    box-shadow: 0 2px 12px #ED145B14;
+    box-shadow: 0 2px 12px #3a86ff22;
 }
 
 #entrada-de-texto::placeholder {
@@ -71,16 +75,16 @@ h1 {
     padding: 1.25rem 3rem;
     border-radius: 0.7rem;
     border: none;
-    background: var(--cor-destaque);
+    background: var(--cor-badge);
     color: #fff;
     font-size: 2rem;
     font-weight: 500;
-    box-shadow: 0 4px 16px #ED145B33;
+    box-shadow: 0 4px 16px #3a86ff33;
     cursor: pointer;
     transition: background 0.2s;
 }
 #botao-palavrachave:hover {
-    background: #c40448;
+    background: var(--cor-badge-hover);
 }
 
 #resultado-palavrachave {
@@ -88,7 +92,7 @@ h1 {
     flex-wrap: wrap;
     gap: 0.7rem;
     border-radius: 0.625rem;
-    color: var(--cor-destaque);
+    color: #fff;
     font-size: 2.3rem;
     justify-content: center;
     margin-bottom: 2rem;
@@ -99,7 +103,7 @@ h1 {
 
 .palavra-chave-badge {
     display: inline-block;
-    background: var(--cor-destaque);
+    background: var(--cor-badge);
     color: #fff;
     border-radius: 1rem;
     padding: 0.6rem 1.4rem;
@@ -107,9 +111,9 @@ h1 {
     font-size: 2rem;
     font-weight: 600;
     letter-spacing: 1px;
-    box-shadow: 0 2px 8px rgba(237,20,91,0.14);
+    box-shadow: 0 2px 8px rgba(58,134,255,0.14);
     transition: background 0.2s;
 }
 .palavra-chave-badge:hover {
-    background: #c40448;
+    background: var(--cor-badge-hover);
 }
